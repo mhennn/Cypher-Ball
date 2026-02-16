@@ -4,9 +4,8 @@ from core.get_answer import GetAnswer
 flask_app = Flask(__name__)
 retrieve_answer = GetAnswer()
 
-@flask_app.route('/', methods=['GET'])
+@flask_app.route('/')
 def home():
-    request.args.get('reveal_answer')
     return render_template('index.html')
 
 @flask_app.route('/message', methods=['POST'])
