@@ -8,7 +8,7 @@ retrieve_answer = GetAnswer()
 def home():
     return render_template('index.html')
 
-@flask_app.route('/answer', methods=['POST'])
+@flask_app.route('/message', methods=['POST'])
 def show_answer():
     display_answer = retrieve_answer.get_answer()
     return render_template('answer.html', ball_answer=display_answer)
