@@ -2,7 +2,7 @@ from fastapi import FastAPI
 import random
 from word_list import WORDS
 
-app = FastAPI()
+app = FastAPI(debug=True)
 
 @app.get('/')
 def home():
