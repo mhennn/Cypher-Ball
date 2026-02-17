@@ -8,7 +8,7 @@ app = FastAPI(debug=True)
 def home():
     return "Welcome to Cyper-Ball API"
 
-@app.get('/message')
+@app.get('/answer')
 def give_answer():
     random_answer = random.choice(WORDS)
     return {
