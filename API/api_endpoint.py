@@ -6,7 +6,9 @@ app = FastAPI(debug=True)
 
 @app.get('/')
 def home():
-    return "Welcome to Cyper-Ball API"
+    return {
+        "message": "You're on the right track. Welcome to Cyper-Ball API"
+    }
 
 @app.get('/answer')
 def give_answer():
